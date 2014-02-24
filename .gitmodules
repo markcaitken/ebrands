@@ -1,0 +1,6 @@
+[submodule "wp-content/themes/theme-camphinboston/submodules/less.js"]
+	path = wp-content/themes/theme-camphinboston/submodules/less.js
+	url = git://github.com/cloudhead/less.js.git
+[submodule "wp-content/themes/theme-camphinboston/submodules/bootstrap"]
+	path = wp-content/themes/theme-camphinboston/submodules/bootstrap
+	url = git://github.com/twitter/bootstrap.git
