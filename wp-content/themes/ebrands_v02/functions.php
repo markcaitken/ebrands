@@ -212,14 +212,14 @@ class eBconditional
         $env = $ebrands->config->get('env');
         $template = $ebrands->config->get('template');
         if ($env == 'local') {
-            $css_type = 'text/css';
+            $css_type = 'text/less';
             $css = array(
                 $template.'/assets/css/network.less'
             );
             $js_head = array(
                 //$template.'/assets/js/vendors/modernizr/modernizr.js',
-                $template.'/assets/js/vendors/less.js/less-1.3.3.min.js',
-                //$template.'/assets/js/vendors/todo/jquery.js',
+                $template.'/assets/js/vendors/less.js/less-1.4.1.min.js',
+                $template.'/assets/js/vendors/todo/jquery.js',
                 $template.'/assets/js/vendors/todo/html5shiv.js'
             );
             $js_foot = array(
@@ -249,10 +249,13 @@ class eBconditional
                 $template.'/assets/js/vendors/bootstrap/bootstrap.min.js'
             );
         }
-        
+     
+        $this->js_head[] = '<script>less = {env:"development"};</script>';
+        $this->js_head[] = '<script src="http://code.jquery.com/jquery.js"></script>';
+           
         // Now wrap that stuff with this stuff!
         foreach ($css as $href) {
-            $this->css[] = '<link rel="stylesheet/less" type="'.$css_type.'" href="'.$href.'" media="all" />';
+            $this->css[] = '<link rel="stylesheet" type="'.$css_type.'" href="'.$href.'" media="all" />';
         }
         foreach ($js_head as $src) {
             $this->js_head[] = '<script src="'.$src.'"></script>';
@@ -262,8 +265,6 @@ class eBconditional
         }
 
 
-        $this->js_head[] = '<script>less = {env:"development"};</script>';
-        //$this->js_head[] = '<script src="http://code.jquery.com/jquery.js"></script>';
         
         // Everything is now good, cept the meta...
         $this->css     = implode(PHP_EOL, $this->css).PHP_EOL;

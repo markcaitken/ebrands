@@ -1,0 +1,241 @@
+// Logo
+.logo {
+  position: relative;
+  display: block;
+  height: 276px;
+  margin-top: -90px;
+
+  .logo-left {
+    position: absolute;
+    top: 126px;
+    left: 15px;
+  }
+
+  .logo-right {
+    float: right;
+  }
+}
+
+.home .logo {
+  margin-top: -40px;
+}
+
+
+// Navigation
+#menu-navigation, #menu-footer {
+  margin-top: 20px;
+  font-family: @font-family-sans-serif;
+}
+
+// Sidebar
+.nav {
+  > li {
+    > a {
+      font-size: 12px;
+      font-weight: bold;
+      padding: 3px 15px 1px 0;
+    }
+    &.current_page_item > a,
+    &.current-menu-ancestor > a {
+      color: @brand-purple;
+    }
+    &.current_page_item .nav,
+    &.current-menu-ancestor .nav {
+      display: block;
+    }
+  }
+  .nav {
+    padding-bottom: 20px;
+    display: none;
+    >li > a {
+      font-weight: normal;
+    }
+  }
+}
+
+// Footer
+#menu-footer {
+  list-style: none;
+  margin: 35px 0 0 0;
+  padding: 0;
+
+  > li {
+    float: left;
+    padding: 0px 13px 0px 0;
+  }
+
+  > li > a {
+    font-size: 10px;
+    font-weight: bold;
+  }
+}
+
+.support {
+  float: right;
+  font-family: @font-family-sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+
+
+// Misc type
+p {
+  margin: 0 0 22px;
+}
+
+h1 {
+  font-family: @font-family-sans-serif;
+  color: @brand-purple;
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid @brand-green-dark;
+}
+
+.home h1 {
+  display: none;
+}
+
+h2 {
+  font-family: Baskerville;
+  font-size: 50px;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+h3 {
+  font-family: @font-family-sans-serif;
+  color: @brand-purple;
+  font-weight: bold;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  margin-top: 14px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: @brand-green-dark;
+  margin: 22px 0 20px;
+}
+
+.purple a {
+  color: @brand-purple;
+}
+
+
+// Misc div junk
+.page {
+  padding-bottom: 15px;
+}
+.home .page {
+  padding-bottom: 0;
+}
+
+// Questions
+.home #questions {
+  border-top: 1px solid @brand-green-dark;
+}
+
+.questions-title {
+  font-family: Baskerville;
+  font-size: 19px;
+  font-style: italic;
+  text-transform: lowercase;
+  padding-right: 5px;
+}
+
+.breadcrumbs,
+.breadcrumbs a {
+  font-family: @font-family-sans-serif;
+  font-size: 11px;
+  color: @brand-purple;
+}
+.seperator {
+  color: @brand-green-light;
+  padding: 0 5px;
+}
+
+#questions {
+  clear: both;
+  float: left;
+  margin-top: 12px;
+  border-top: 1px solid @brand-green-light;
+
+  h3 {
+    margin: 0;
+  }
+
+  .collapsed h3 {
+    color: @brand-green-light;
+  }
+
+  .accordion-group {
+    clear: both;
+    margin-bottom: 2px;
+    border-width: 0 0 1px;
+    border-color: @brand-green-light;
+    border-radius: 0px;
+    padding: 18px 0;
+  }
+
+  .question {
+    overflow: hidden;
+  }
+  .question-left {
+    float: left; width: 87%; 
+  }
+  .question-right {
+    float: right; width: 35px;
+  }
+
+  .arrow {
+    float: right;
+  }
+
+}
+
+// Responsive junk
+@media (max-width: 770px) {
+  .logo {
+    height: 60px;
+    .logo-left {
+      position: static;
+      width: 241px;
+      margin: 0 auto;
+      display: block;
+      padding-top: 15px;
+    }
+
+    .logo-right {
+      display: none;
+    }
+  }
+
+  .nav {
+    > li {
+      > a {
+        font-size: 12px;
+        font-weight: bold;
+        height: 30px;
+        line-height: 30px;
+        background: @brand-green-light;
+        text-align: center;
+        margin-bottom: 1px;
+      }
+      &.current_page_item > a,
+      &.current-menu-ancestor > a {
+        background: @brand-green-dark;
+        color: white;
+      }
+    }
+    .nav {
+      >li > a {
+        font-weight: normal;
+      }
+      padding-bottom: 20px;
+    }
+  }
+}

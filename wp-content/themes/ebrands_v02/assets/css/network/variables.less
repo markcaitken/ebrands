@@ -19,17 +19,21 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         #428bca;
+@brand-primary:         #00703c;
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 @brand-info:            #5bc0de;
 
+@brand-green-dark: #006935;
+@brand-green-light: #bfd9cc;
+@brand-purple: #512178;
+
 // Scaffolding
 // -------------------------
 
 @body-bg:               #fff;
-@text-color:            @gray-dark;
+@text-color:            #006935;
 
 // Links
 // -------------------------
@@ -40,17 +44,17 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif:  Arial, Helvetica, sans-serif;
+@font-family-serif:       "Times New Roman", Georgia, Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
-@font-family-base:        @font-family-sans-serif;
+@font-family-base:        @font-family-serif;
 
-@font-size-base:          14px;
+@font-size-base:          16px;
 @font-size-large:         ceil(@font-size-base * 1.25); // ~18px
 @font-size-small:         ceil(@font-size-base * 0.85); // ~12px
 @font-size-mini:          ceil(@font-size-base * 0.75); // ~11px
 
-@line-height-base:        1.428571429; // 20/14
+@line-height-base:        1.4; // 22/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
 @headings-font-family:    @font-family-base;
@@ -396,7 +400,7 @@
 @screen-tablet-max:          @screen-small-max;
 
 // Large screen / wide desktop
-@screen-large:               1200px;
+@screen-large:               995px;
 @screen-large-desktop:       @screen-large;
 
 
@@ -410,7 +414,7 @@
 @container-desktop:         940px;
 
 // Large screen / wide desktop
-@container-large-desktop:   1170px;
+@container-large-desktop:   995px;
 
 
 // Grid system
